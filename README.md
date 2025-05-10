@@ -71,8 +71,8 @@ This project is proudly sponsored by [AnotherWrapper](https://anotherwrapper.com
    ```
    Visit [http://localhost:3000](http://localhost:3000)
 
-#### alternatively run via docker
-3. **start docker image**
+#### Alternatively run via docker
+3. **Start docker Container**
    ```bash
    docker compose up -d
    ```
