@@ -61,6 +61,8 @@ This project is proudly sponsored by [AnotherWrapper](https://anotherwrapper.com
    OPENAI_API_KEY=your-openai-api-key
    FIRECRAWL_KEY=your-firecrawl-api-key
    NEXT_PUBLIC_ENABLE_API_KEYS=false  # Set to false to disable API key dialog
+
+   DOCKER_EXPOSED_PORT=your-port-to-expose-via-docker # default 3000
    ```
 
 3. **Run the App**
@@ -68,6 +70,14 @@ This project is proudly sponsored by [AnotherWrapper](https://anotherwrapper.com
    npm run dev
    ```
    Visit [http://localhost:3000](http://localhost:3000)
+
+#### alternatively run via docker
+3. **start docker image**
+   ```bash
+   docker compose up -d
+   ```
+   Visit [http://localhost:DOCKER_EXPOSED_PORT](http://localhost:3000)
+
 
 ## API Key Management
 
