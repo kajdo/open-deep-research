@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "${APP_PORT:-3000}:${APP_PORT:-3000}"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - next-build-cache:/app/.next
+    restart: unless-stopped
+volumes:
+  next-build-cache:

@@ -1,9 +1,13 @@
 { pkgs ? import <nixpkgs> {} }:
 
+let
+  unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixpkgs-unstable.tar.gz") {};
+in
 pkgs.mkShell {
   buildInputs = [
-    pkgs.nodejs_18  # Use Node.js 18.x for good compatibility; adjust if needed.
-    pkgs.git        # For git commands if not installed globally
+    pkgs.nodejs_18
+    pkgs.git
+    unstable.aider-chat  # Use the aider-chat from the latest unstable nixpkgs
   ];
   shellHook = ''
     echo "You can now run 'npm install' and 'npm run dev'"
