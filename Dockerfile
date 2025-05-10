@@ -14,8 +14,8 @@ RUN npm install
 # Copy all files
 COPY . .
 
-# Expose the port (default to 3000 if APP_PORT not set)
-EXPOSE ${APP_PORT:-3000}
+# Expose default port
+EXPOSE 3000
 
-# Start the application (build happens on startup for development)
-CMD ["sh", "-c", "npm run build && PORT=${APP_PORT:-3000} npm start"]
+# Start the application in development mode
+CMD ["npm", "run", "dev"]
